@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+  <Id>9cfffca0-ca59-4956-afb3-40a85782ba08</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Abhinav</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="MRF StockTaking Programme" />
+  <Description DefaultValue="MRF StockTaking Programme for INS Tube Flap Tallying" />
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon.png" />
+  <SupportUrl DefaultValue="https://example.com/support" />
+  <AppDomains>
+    <AppDomain>https://example.com</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="SharedRuntime" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides>
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides">
+      <VersionOverride Version="1.0">
+        <Hosts>
+          <Host xsi:type="Workbook">
+            <Runtimes>
+              <Runtime resid="Taskpane.Url" lifetime="long" />
+            </Runtimes>
+            <AllFormFactors>
+              <ExtensionPoint xsi:type="TaskPane">
+                <SourceLocation resid="Taskpane.Url" />
+                <Title resid="Taskpane.Title" />
+              </ExtensionPoint>
+            </AllFormFactors>
+          </Host>
+        </Hosts>
+        <Resources>
+          <bt:Images>
+            <bt:Image id="icon" DefaultValue="https://localhost:3000/assets/icon.png" />
+          </bt:Images>
+          <bt:Urls>
+            <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
+          </bt:Urls>
+          <bt:ShortStrings>
+            <bt:String id="Taskpane.Title" DefaultValue="MRF StockTaking Programme" />
+          </bt:ShortStrings>
+          <bt:LongStrings>
+            <bt:String id="Taskpane.Description" DefaultValue="MRF StockTaking Programme for INS Tube Flap Tallying" />
+          </bt:LongStrings>
+        </Resources>
+      </VersionOverride>
+    </VersionOverrides>
+  </VersionOverrides>
+</OfficeApp>
